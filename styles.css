@@ -1,9 +1,15 @@
+/* ============================================
+   Base reset & layout
+   ============================================ */
+
+/* Remove default margins/padding; use border-box for predictable sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page: centered content, warm off-white background, full-height flex */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +20,11 @@ body {
     padding: 20px;
 }
 
+/* ============================================
+   Cards container
+   ============================================ */
+
+/* Horizontal row of cards; 24px gap, centered, no wrap */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +34,11 @@ body {
     align-items: flex-start;
 }
 
+/* ============================================
+   Single pricing card
+   ============================================ */
+
+/* Card: column layout, fixed width, warm gray bg, pill-friendly height */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +50,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Wraps title, price, and feature list (no button) */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name (e.g. Hobby, Pro) */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +65,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row: amount + optional period aligned on baseline */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -65,21 +84,25 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Spacing below the feature list (before button) */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" / "Everything in Hobby, plus:" label */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list: no bullets, no left padding */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Each feature: checkmark + text, 8px between rows */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +111,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon spacing from text */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +119,11 @@ body {
     font-weight: 400;
 }
 
+/* ============================================
+   Card CTA buttons
+   ============================================ */
+
+/* Default: sits at bottom of card (margin-top: auto), pill shape */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +146,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary (e.g. Get Pro): dark background, white text */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +160,11 @@ body {
     background-color: #333;
 }
 
+/* ============================================
+   Page label (version badge)
+   ============================================ */
+
+/* Fixed badge at top center; light shadow for separation */
 .page-label {
     position: fixed;
     top: 16px;
