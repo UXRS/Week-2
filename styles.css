@@ -127,7 +127,6 @@ body {
 .download-button {
     margin-top: auto;
     width: fit-content;
-    background-color: #e6e5e0;
     border: none;
     border-radius: 999px;
     padding: 14px 24px;
@@ -159,6 +158,34 @@ body {
 .download-button.primary:active {
     background-color: #333;
 }
+
+/* Secondary (e.g. Download): light background, dark text */
+.download-button.secondary {
+    background-color: transparent;
+    border: 1px solid #D8D6CE;
+    color: #333;
+}
+
+.download-button.secondary:hover {
+    background-color: #D8D6CE;
+}
+
+.download-button.secondary:active {
+    background-color: #D8D6CE;
+}
+.download-button.tertiary {
+    background-color: transparent;;
+    color: #333;
+} 
+
+.download-button.tertiary:hover {
+    background-color: #D8D6CE;
+}
+
+.download-button.tertiary:active {
+    background-color: #D8D6CE;
+}
+
 
 /* ============================================
    Page label (version badge)
